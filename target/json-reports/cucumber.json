@@ -3,96 +3,56 @@
     "line": 4,
     "elements": [
       {
-        "start_timestamp": "2020-09-24T19:45:04.678Z",
-        "before": [
-          {
-            "result": {
-              "duration": 2000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepdefinitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 13,
-        "name": "TC08_kullanici walmartta urun arar",
+        "line": 5,
+        "name": "Koala Palace Admin Giris",
         "description": "",
-        "id": "walmart-urun-arama;tc08-kullanici-walmartta-urun-arar;test-verileri;2",
-        "after": [
-          {
-            "result": {
-              "duration": 10855000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 39061000000,
+              "duration": 11803000000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "kullanici \"https://walmart.com\" sayfasina gider",
+            "line": 6,
+            "name": "kullanici koalapalace admin sayfasina gider",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"https://walmart.com\"",
-                  "offset": 10
-                }
-              ],
-              "location": "stepdefinitions.EbayStepDefinitions.kullanici_sayfasina_gider(java.lang.String)"
+              "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2397000000,
+              "duration": 1296000000,
               "status": "passed"
             },
-            "line": 9,
-            "name": "kullanici walmart aramakutusuna \"calculator\" yazar ve arar",
+            "line": 7,
+            "name": "kullanici kullaniciadi ve sifresini girer",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"calculator\"",
-                  "offset": 32
-                }
-              ],
-              "location": "stepdefinitions.WalmartStepDefinitions.kullanici_walmart_aramakutusuna_yazar_ve_arar(java.lang.String)"
+              "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2434000000,
+              "duration": 9005000000,
               "status": "passed"
             },
-            "line": 10,
-            "name": "kullanici walmart sonuc sayisini ekrana yazdirir",
+            "line": 8,
+            "name": "kullanici giris islemini gerceklestirir",
             "match": {
-              "location": "stepdefinitions.WalmartStepDefinitions.kullanici_walmart_sonuc_sayisini_ekrana_yazdirir()"
+              "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
             },
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@walmart"
           }
         ]
       },
       {
-        "start_timestamp": "2020-09-24T19:45:59.505Z",
+        "start_timestamp": "2020-10-01T20:21:08.938Z",
         "before": [
           {
             "result": {
+              "duration": 3000000,
               "status": "passed"
             },
             "match": {
@@ -100,14 +60,14 @@
             }
           }
         ],
-        "line": 14,
-        "name": "TC08_kullanici walmartta urun arar",
+        "line": 281,
+        "name": "TC26_kullanici hotelreservationlist sayfasinda verileri girerek reservation arar",
         "description": "",
-        "id": "walmart-urun-arama;tc08-kullanici-walmartta-urun-arar;test-verileri;3",
+        "id": "koala-palace;tc26-kullanici-hotelreservationlist-sayfasinda-verileri-girerek-reservation-arar",
         "after": [
           {
             "result": {
-              "duration": 3842000000,
+              "duration": 1826000000,
               "status": "passed"
             },
             "match": {
@@ -116,157 +76,81 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 9121000000,
+              "duration": 2734000000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "kullanici \"https://walmart.com\" sayfasina gider",
+            "line": 282,
+            "name": "kullanici hotelroomreservationlist sayfasina gider",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"https://walmart.com\"",
-                  "offset": 10
-                }
-              ],
-              "location": "stepdefinitions.EbayStepDefinitions.kullanici_sayfasina_gider(java.lang.String)"
+              "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservationlist_sayfasina_gider()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 23016000000,
+              "duration": 1204000000,
               "status": "passed"
             },
-            "line": 9,
-            "name": "kullanici walmart aramakutusuna \"watch\" yazar ve arar",
+            "line": 283,
+            "name": "kullanici hotelroomreservationlist hotelroomid bolumunde \"team06\" secer",
             "match": {
               "arguments": [
                 {
-                  "val": "\"watch\"",
-                  "offset": 32
+                  "val": "\"team06\"",
+                  "offset": 57
                 }
               ],
-              "location": "stepdefinitions.WalmartStepDefinitions.kullanici_walmart_aramakutusuna_yazar_ve_arar(java.lang.String)"
+              "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservationlist_hotelroomid_bolumunde_secer(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 83000000,
+              "duration": 3298000000,
               "status": "passed"
             },
-            "line": 10,
-            "name": "kullanici walmart sonuc sayisini ekrana yazdirir",
+            "line": 284,
+            "name": "kullanici hotelroomreservationlist arama kutusuna tiklar",
             "match": {
-              "location": "stepdefinitions.WalmartStepDefinitions.kullanici_walmart_sonuc_sayisini_ekrana_yazdirir()"
+              "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservationlist_arama_kutusuna_tiklar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 979000000,
+              "status": "passed"
+            },
+            "line": 285,
+            "name": "kullanici hotelroomreservationlist kayitlarini inceler",
+            "match": {
+              "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservationlist_kayitlarini_inceler()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@walmart"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-09-24T19:46:35.573Z",
-        "before": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepdefinitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 15,
-        "name": "TC08_kullanici walmartta urun arar",
-        "description": "",
-        "id": "walmart-urun-arama;tc08-kullanici-walmartta-urun-arar;test-verileri;4",
-        "after": [
-          {
-            "result": {
-              "duration": 486000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 5266000000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "kullanici \"https://walmart.com\" sayfasina gider",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"https://walmart.com\"",
-                  "offset": 10
-                }
-              ],
-              "location": "stepdefinitions.EbayStepDefinitions.kullanici_sayfasina_gider(java.lang.String)"
-            },
-            "keyword": "Given "
+            "name": "@koalapalace"
           },
           {
-            "result": {
-              "duration": 10618000000,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "kullanici walmart aramakutusuna \"flower\" yazar ve arar",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"flower\"",
-                  "offset": 32
-                }
-              ],
-              "location": "stepdefinitions.WalmartStepDefinitions.kullanici_walmart_aramakutusuna_yazar_ve_arar(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 68000000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "kullanici walmart sonuc sayisini ekrana yazdirir",
-            "match": {
-              "location": "stepdefinitions.WalmartStepDefinitions.kullanici_walmart_sonuc_sayisini_ekrana_yazdirir()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@walmart"
+            "name": "@hotelreservationsearch"
           }
         ]
       }
     ],
-    "name": "Walmart Urun Arama",
+    "name": "Koala Palace",
     "description": "",
-    "id": "walmart-urun-arama",
+    "id": "koala-palace",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/walmart.feature",
+    "uri": "file:src/test/resources/features/koalapalace.feature",
     "tags": [
       {
-        "name": "@walmart",
+        "name": "@koalapalace",
         "type": "Tag",
         "location": {
           "line": 3,

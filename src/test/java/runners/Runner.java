@@ -6,7 +6,9 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions (
+
+@CucumberOptions (  //Framwork ile ilgili bilgi ve seçeklerin eklendiği bölüm
+
         plugin = {"html:target/default-cucumber-reports",  //html rapor alır
                   "json:target/json-reports/cucumber.json" ,  // json olarak rapor alır
                    "junit:target/xml-report/cucumber.xml"},// junitolarak Rapor alır

@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="108.529">
-<testcase classname="Walmart Urun Arama" name="TC08_kullanici walmartta urun arar" time="54.755">
-<system-out><![CDATA[Given kullanici "https://walmart.com" sayfasina gider.......................passed
-And kullanici walmart aramakutusuna "calculator" yazar ve arar..............passed
-Then kullanici walmart sonuc sayisini ekrana yazdirir.......................passed
-]]></system-out>
-</testcase>
-<testcase classname="Walmart Urun Arama" name="TC08_kullanici walmartta urun arar 2" time="36.062">
-<system-out><![CDATA[Given kullanici "https://walmart.com" sayfasina gider.......................passed
-And kullanici walmart aramakutusuna "watch" yazar ve arar...................passed
-Then kullanici walmart sonuc sayisini ekrana yazdirir.......................passed
-]]></system-out>
-</testcase>
-<testcase classname="Walmart Urun Arama" name="TC08_kullanici walmartta urun arar 3" time="16.438">
-<system-out><![CDATA[Given kullanici "https://walmart.com" sayfasina gider.......................passed
-And kullanici walmart aramakutusuna "flower" yazar ve arar..................passed
-Then kullanici walmart sonuc sayisini ekrana yazdirir.......................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="34.133">
+<testcase classname="Koala Palace" name="TC26_kullanici hotelreservationlist sayfasinda verileri girerek reservation arar" time="32.45">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomreservationlist sayfasina gider....................passed
+And kullanici hotelroomreservationlist hotelroomid bolumunde "team06" secer.passed
+And kullanici hotelroomreservationlist arama kutusuna tiklar................passed
+Then kullanici hotelroomreservationlist kayitlarini inceler.................passed
 ]]></system-out>
 </testcase>
 </testsuite>
