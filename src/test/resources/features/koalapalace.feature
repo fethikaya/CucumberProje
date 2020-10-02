@@ -285,4 +285,28 @@ Feature: Koala Palace
     Then kullanici hotelroomreservationlist kayitlarini inceler
 
 
+    @hoteledit
+    Scenario: TC27_kullanici hoteledit sayfasına gider ve otel bilgilerini düzenler
+      Given kullanici hoteledit sayfasine gider
+      And kullanci code bolumunu "21" olarak degistirir
+      And kullanci otel adini "Kervan Saray" olarak duzenler
+      And kullanici adresi "Diyarbakir" olarak degistirir
+      And kullanici telefon numarasını "0412 215 65 87" olarak degistiri
+      And kullanici email adresin "info@kervansaray.com" olarak degistirir
+      And kullanici otel turunu "Hotel Type1" olarak secer
+      And kullanici save butunona tiklayarak degisikliklerikayd eder
+      Then kullanici degisiklikleri yapilip yapilmadigini Assert eder
+
+
+  @hotelroomedit
+  Scenario: TC28_kullanici hotelroomedit sayfasinda properties bolumundeki veriyi siler
+    Given kullanici hotelroomedit "http://www.kaolapalace-qa-environment2.com/admin/HotelRoomAdmin/Edit?Id=472" sayfasina gider
+    And kullanici hotelroomedit sayfasinda properties bolumune tiklar
+    And kullanici hotelroomedit sayfasinda tip olarak "room prop1" secer
+    And kullanici hotelroomedit sayfasinda code olarak "4444" girer
+    And kullanici hotelroomedit sayfasinda value olarak "sistem bozuldu" girer
+    And kullanici hotelroomedit sayfasinda save butonuna tiklar
+    Then kullanici hotelroomedit sayfasinda properties bolumunde yeni kayit oldugunu assert eder
+
+
 

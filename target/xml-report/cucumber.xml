@@ -1,13 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="34.133">
-<testcase classname="Koala Palace" name="TC26_kullanici hotelreservationlist sayfasinda verileri girerek reservation arar" time="32.45">
-<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="54.35">
+<testcase classname="Koala Palace" name="TC28_kullanici hotelroomedit sayfasinda properties bolumundeki veriyi siler" time="52.946">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tbody/tr[1]/td[6]/a&quot;}&#10;  (Session info: chrome=85.0.4183.121)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-2VFDQBD', ip: '192.168.2.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Fethi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59090}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 60eae2b70dfcb482c62f5f5062980c56&#10;*** Element info: {Using=xpath, value=//tbody/tr[1]/td[6]/a}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
 And kullanici kullaniciadi ve sifresini girer...............................passed
 Then kullanici giris islemini gerceklestirir................................passed
-Given kullanici hotelroomreservationlist sayfasina gider....................passed
-And kullanici hotelroomreservationlist hotelroomid bolumunde "team06" secer.passed
-And kullanici hotelroomreservationlist arama kutusuna tiklar................passed
-Then kullanici hotelroomreservationlist kayitlarini inceler.................passed
-]]></system-out>
+Given kullanici hotelroomedit "http://www.kaolapalace-qa-environment2.com/admin/HotelRoomAdmin/Edit?Id=472" sayfasina gider.passed
+And kullanici hotelroomedit sayfasinda properties bolumune tiklar...........passed
+And kullanici hotelroomedit sayfasinda tip olarak "room prop1" secer........passed
+And kullanici hotelroomedit sayfasinda code olarak "4444" girer.............passed
+And kullanici hotelroomedit sayfasinda value olarak "sistem bozuldu" girer..passed
+And kullanici hotelroomedit sayfasinda save butonuna tiklar.................passed
+Then kullanici hotelroomedit sayfasinda properties bolumunde yeni kayit oldugunu assert eder.failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//tbody/tr[1]/td[6]/a"}
+  (Session info: chrome=85.0.4183.121)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2VFDQBD', ip: '192.168.2.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Fethi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59090}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 60eae2b70dfcb482c62f5f5062980c56
+*** Element info: {Using=xpath, value=//tbody/tr[1]/td[6]/a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.isDisplayed(Unknown Source)
+	at stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomedit_sayfasinda_properties_bolumunde_yeni_kayit_oldugunu_assert_eder(KoalaPalaceStepDef.java:433)
+	at ✽.kullanici hotelroomedit sayfasinda properties bolumunde yeni kayit oldugunu assert eder(file:///C:/Users/Fethi/IdeaProjects/CucumberProje/src/test/resources/features/koalapalace.feature:309)
+]]></failure>
 </testcase>
 </testsuite>

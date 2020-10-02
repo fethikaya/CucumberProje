@@ -330,4 +330,110 @@ public class KoalaPalaceStepDef {
 
     //========================================================================
 
+
+    @Given("kullanici hoteledit sayfasine gider")
+    public void kullanici_hoteledit_sayfasine_gider() {
+        Driver.getDriver().get("http://www.kaolapalace-qa-environment2.com/admin/HotelAdmin/Edit?Id=4");
+
+    }
+
+    @Given("kullanci code bolumunu {string} olarak degistirir")
+    public void kullanci_code_bolumunu_olarak_degistirir(String string) {
+        page.hotelEditCode.clear();
+        page.hotelEditCode.sendKeys(string);
+    }
+
+    @Given("kullanci otel adini {string} olarak duzenler")
+    public void kullanci_otel_adini_olarak_duzenler(String string) {
+        page.hotelEditName.clear();
+        page.hotelEditName.sendKeys(string);
+    }
+
+    @Given("kullanici adresi {string} olarak degistirir")
+    public void kullanici_adresi_olarak_degistirir(String string) {
+        page.hotelEditAddress.clear();
+    page.hotelEditAddress.sendKeys(string);
+    }
+
+    @Given("kullanici telefon numarasını {string} olarak degistiri")
+    public void kullanici_telefon_numarasını_olarak_degistiri(String string) {
+        page.hotelEditPhone.clear();
+     page.hotelEditPhone.sendKeys(string);
+    }
+
+    @Given("kullanici email adresin {string} olarak degistirir")
+    public void kullanici_email_adresin_olarak_degistirir(String string) {
+        page.hotelEditEmail.clear();
+    page.hotelEditEmail.sendKeys(string);
+    }
+
+    @Given("kullanici otel turunu {string} olarak secer")
+    public void kullanici_otel_turunu_olarak_secer(String string) {
+
+        Select select = new Select(page.hotelEditIDGroupDropAndDraw);
+        select.selectByVisibleText(string);
+    }
+
+    @Given("kullanici save butunona tiklayarak degisikliklerikayd eder")
+    public void kullanici_save_butunona_tiklayarak_degisikliklerikayd_eder() {
+    page.hotelEditSaveButunu.click();
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    @Then("kullanici degisiklikleri yapilip yapilmadigini Assert eder")
+    public void kullanici_degisiklikleri_yapilip_yapilmadigini_Assert_eder() {
+        Assert.assertTrue(page.DegisikliklerKaydEdildiMi.isDisplayed());
+
+    }
+
+
+    // =======================================================
+
+
+
+    @Given("kullanici hotelroomedit {string} sayfasina gider")
+    public void kullanici_hotelroomedit_sayfasina_gider(String string) {
+        Driver.getDriver().get(string);
+    }
+    @Given("kullanici hotelroomedit sayfasinda properties bolumune tiklar")
+    public void kullanici_hotelroomedit_sayfasinda_properties_bolumune_tiklar() {
+        page.hotelRoomEditPropertiesLinki.click();
+    }
+    @Given("kullanici hotelroomedit sayfasinda tip olarak {string} secer")
+    public void kullanici_hotelroomedit_sayfasinda_tip_olarak_secer(String string) {
+        Select select = new Select(page.hotelRoomEditPropertiesTipDropdown);
+        select.selectByVisibleText(string);
+    }
+    @Given("kullanici hotelroomedit sayfasinda code olarak {string} girer")
+    public void kullanici_hotelroomedit_sayfasinda_code_olarak_girer(String string) {
+        page.hotelRoomEditPropertiesCodeKutusu.sendKeys(string);
+    }
+    @Given("kullanici hotelroomedit sayfasinda value olarak {string} girer")
+    public void kullanici_hotelroomedit_sayfasinda_value_olarak_girer(String string) {
+        page.hotelRoomEditPropertiesValueKutusu.sendKeys(string);
+    }
+    @Given("kullanici hotelroomedit sayfasinda save butonuna tiklar")
+    public void kullanici_hotelroomedit_sayfasinda_save_butonuna_tiklar() {
+        page.hotelRoomEditPropertiesSaveButonu.click();
+    }
+    @Then("kullanici hotelroomedit sayfasinda properties bolumunde yeni kayit oldugunu assert eder")
+    public void kullanici_hotelroomedit_sayfasinda_properties_bolumunde_yeni_kayit_oldugunu_assert_eder() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        boolean gorunuyorMu = page.hotelRoomEditPropertiesIlkKayitRemoveButonu.isDisplayed();
+        Assert.assertTrue(gorunuyorMu);
+    }
+
+    //======================================================
+
 }
